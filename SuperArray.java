@@ -18,7 +18,7 @@ public class SuperArray{
     return size;
   }
 
-  public void moreSpace(){
+  public void resize(){
     int hello[] = new String[data.length()+1];
     for (int i=0; i < data.length(); i++){
       hello[i] = data[i];
@@ -28,7 +28,7 @@ public class SuperArray{
 
   public boolean add(String element){
     if (size>data.length()){
-      data.moreSpace();
+      data.resize();
       data[data.length()-1]=element;
     }
     else{
