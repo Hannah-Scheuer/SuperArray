@@ -49,4 +49,27 @@ public class SuperArray{
     return replaced;
   }
 
+  public boolean isEmpty(){
+    int curr = size();
+    return curr == 0;
+  }
+
+  public String toString(){
+    int curr = size();
+    String total = "[";
+    for (int i = 0; i<curr-1;i++){
+      total = total + data[i] + ", ";
+    }
+    return total + data[curr-1]+"]";
+  }
+
+  public boolean contains(String s){
+    for (int i = 0; i<data.length;i++){
+      if (data[i].equals(s)){
+        return true;
+      }
+    }
+    return false;
+  }
+
 }
