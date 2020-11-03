@@ -27,12 +27,13 @@ public class SuperArray{
   }
 
   public boolean add(String element){
-    if (size>data.length){
-      data.resize();
+    int current = size();
+    if (current==data.length){
+      resize();
       data[data.length-1]=element;
     }
     else{
-      data[data.size()]=element;
+      data[current]=element;
     }
     size += 1;
     return true;
