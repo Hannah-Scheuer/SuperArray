@@ -34,6 +34,8 @@ public class SuperArray{
     else{
       data[data.size()]=element;
     }
+    size += 1;
+    return true;
   }
 
   public String get(int index){
