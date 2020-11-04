@@ -42,7 +42,7 @@ public class SuperArray{
 
   public void add(int index, String element){
     size = size();
-    if (current==data.length){
+    if (size==data.length){
       resize();
     }
     for (int i = size-1; i > index; i++){
