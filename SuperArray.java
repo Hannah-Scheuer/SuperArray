@@ -52,6 +52,16 @@ public class SuperArray{
     size += 1;
   }
 
+   public String remove(int index){
+     String removed = data[index];
+     int curr = size();
+     for (int i = index-1; i<curr;i++){
+       data[i]=data[i+1];
+     }
+     size = size -1;
+     return removed;
+   }
+
   public String get(int index){
     return data[index];
   }
@@ -92,6 +102,8 @@ public class SuperArray{
     }
     size = size();
   }
+
+
 
 
 
