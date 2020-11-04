@@ -103,8 +103,14 @@ public class SuperArray{
     size = size();
   }
 
-
-
-
-
+   public int indexOf(String s){
+     int index = -1;
+     int curr = size();
+     for (int i = 0; i< curr;i++){
+       if (data[i].equals(s)){
+         return i;
+       }
+     }
+     return index;
+   }
 }
