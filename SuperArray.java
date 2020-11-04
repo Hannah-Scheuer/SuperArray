@@ -113,4 +113,13 @@ public class SuperArray{
      }
      return index;
    }
+
+    public String[] toArray(){
+      int curr = size();
+      String hello[] = new String[curr];
+      for (int i=0; i < data.length; i++){
+        hello[i] = data[i];
+      }
+      return hello;
+    }
 }
