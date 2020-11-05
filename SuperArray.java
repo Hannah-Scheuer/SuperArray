@@ -55,7 +55,7 @@ public class SuperArray{
    public String remove(int index){
      String removed = data[index];
      int curr = size();
-     for (int i = index-1; i<curr;i++){
+     for (int i = index-1; i<curr-1;i++){
        data[i]=data[i+1];
      }
      size = size -1;
@@ -79,6 +79,9 @@ public class SuperArray{
 
   public String toString(){
     int curr = size();
+    if (curr==0){
+      return "[]"
+    }
     String total = "[";
     for (int i = 0; i<curr-1;i++){
       total = total + data[i] + ", ";
