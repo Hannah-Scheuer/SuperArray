@@ -117,6 +117,17 @@ public class SuperArray{
      return index;
    }
 
+   public int lastIndexOf(String value){
+     int index = -1;
+     int curr = size();
+     for (int i = curr-1; i>=0;i--){
+       if (data[i].equals(value)){
+         return i;
+       }
+     }
+     return index;
+   }
+
     public String[] toArray(){
       int curr = size();
       String hello[] = new String[curr];
