@@ -44,6 +44,9 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("Index " +index+ " is not within the bounds of this SuperArray");
+    }
     size = size();
     if (size==data.length){
       resize();
@@ -56,6 +59,9 @@ public class SuperArray{
   }
 
    public String remove(int index){
+     if (index < 0 || index >= size()) {
+       throw new IndexOutOfBoundsException("Index " +index+ " is not within the bounds of this SuperArray");
+     }
      String removed = data[index];
      int curr = size();
      for (int i = index; i<curr ;i++){
