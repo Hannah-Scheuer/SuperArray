@@ -73,6 +73,9 @@ public class SuperArray{
   }
 
   public String set(int index, String element){
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("Index " +index+ " is not within the bounds of this SuperArray");
+    }
     String replaced = data[index];
     data[index]=element;
     return replaced;
