@@ -37,6 +37,7 @@ public class SuperArray{
     int current = size();
     if (current==data.length){
       resize();
+      current= size();
     }
     data[current]=element;
     size += 1;
@@ -44,18 +45,22 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
-    if (index < 0 || index >= size()) {
-      throw new IndexOutOfBoundsException("Index " +index+ " is not within the bounds of this SuperArray");
-    }
     size = size();
-    if (size==data.length){
+    if (size+1==data.length){
       resize();
     }
-    for (int i = size-1; i > index; i++){
-      data[i+1]=data[i];
+    if (index < 0 || index > size()) {
+      throw new IndexOutOfBoundsException("Index " +index+ " is not within the bounds of this SuperArray");
+    }
+    String next = data[index+1];
+    String next1 = data[index];
+    for (int i = index; i <= size; i++){
+      next = data[i+1];
+      data[i+1]=next1;
+      next1 = next;
     }
     data[index]=element;
-    size += 1;
+    size +=1;
   }
 
    public String remove(int index){
