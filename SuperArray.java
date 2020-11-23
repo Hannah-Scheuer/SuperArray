@@ -43,7 +43,6 @@ public class SuperArray{
     size += 1;
     return true;
   }
-
   public void add(int index, String element){
     size = size();
     if (size+1==data.length){
